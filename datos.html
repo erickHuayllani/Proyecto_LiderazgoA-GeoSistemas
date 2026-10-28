@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos ambientales | EcoAlerta</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecera">
+        <a class="marca" href="index.html">
+            <img src="img/favicon.svg" alt="Logotipo EcoAlerta">
+            <span><strong>EcoAlerta</strong><small>Comunidad y cuidado ambiental</small></span>
+        </a>
+        <button class="menu-boton" type="button"
+                aria-expanded="false" aria-controls="navegacion">☰ Menú</button>
+        <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="datos.html" aria-current="page">Datos ambientales</a>
+            <a href="reportar.html">Reportar incidencia</a>
+            <a href="seguimiento.html">Seguimiento</a>
+            <a href="compromisos.html">Compromisos</a>
+            <a class="enlace-interno" href="acceso.html">Acceso de personal</a>
+        </nav>
+    </header>
+
+    <main class="pagina">
+        <p class="etiqueta">INFORMACIÓN PÚBLICA</p>
+        <h1>Datos ambientales</h1>
+        <p class="intro">
+            Consulta información relacionada con el agua, el aire y el ruido
+            en el entorno de la operación minera.
+        </p>
+
+        <div class="aviso">
+            <strong>Importante:</strong> esta página es una demostración.
+            Los resultados oficiales deben ser proporcionados y verificados
+            por los responsables ambientales.
+        </div>
+
+        <section class="tarjetas tres">
+            <article class="tarjeta">
+                <span class="icono">💧</span>
+                <h2>Calidad del agua</h2>
+                <p>Consulta de resultados de monitoreo de agua.</p>
+                <span class="estado estado-info">Datos pendientes</span>
+            </article>
+
+            <article class="tarjeta">
+                <span class="icono">🌿</span>
+                <h2>Calidad del aire</h2>
+                <p>Información sobre mediciones de calidad del aire.</p>
+                <span class="estado estado-info">Datos pendientes</span>
+            </article>
+
+            <article class="tarjeta">
+                <span class="icono">🔊</span>
+                <h2>Ruido ambiental</h2>
+                <p>Consulta de mediciones de ruido en distintas zonas.</p>
+                <span class="estado estado-info">Datos pendientes</span>
+            </article>
+        </section>
+
+        <section class="panel">
+            <h2>¿Tienes alguna preocupación ambiental?</h2>
+            <p>Puedes registrar una incidencia para solicitar su revisión.</p>
+            <a class="boton boton-verde" href="reportar.html">
+                Reportar una incidencia
+            </a>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p><strong>EcoAlerta</strong> — Información para la comunidad.</p>
+    </footer>
+</body>
+</html>

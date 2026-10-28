@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento | EcoAlerta</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecera">
+        <a class="marca" href="index.html">
+            <img src="img/favicon.svg" alt="Logotipo EcoAlerta">
+            <span><strong>EcoAlerta</strong><small>Comunidad y cuidado ambiental</small></span>
+        </a>
+        <button class="menu-boton" type="button"
+                aria-expanded="false" aria-controls="navegacion">☰ Menú</button>
+        <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="datos.html">Datos ambientales</a>
+            <a href="reportar.html">Reportar incidencia</a>
+            <a href="seguimiento.html" aria-current="page">Seguimiento</a>
+            <a href="compromisos.html">Compromisos</a>
+            <a class="enlace-interno" href="acceso.html">Acceso de personal</a>
+        </nav>
+    </header>
+
+    <main class="pagina">
+        <p class="etiqueta">CONSULTA DE ESTADO</p>
+        <h1>Seguimiento de reportes</h1>
+        <p class="intro">
+            Escribe el código que recibiste al registrar tu incidencia.
+        </p>
+
+        <form id="formBusqueda" class="panel formulario">
+            <div class="campo">
+                <label for="codigoBusqueda">Código del reporte</label>
+                <input id="codigoBusqueda" name="codigo" required
+                       placeholder="Ej. EA-0001">
+            </div>
+
+            <div class="acciones">
+                <button class="boton boton-verde" type="submit">
+                    Buscar reporte
+                </button>
+                <button id="verTodos" class="boton boton-suave" type="button">
+                    Ver mis reportes de este navegador
+                </button>
+            </div>
+
+            <p id="mensajeBusqueda" class="mensaje"
+               role="status" aria-live="polite"></p>
+        </form>
+
+        <section class="panel">
+            <h2>Resultado de la consulta</h2>
+            <div id="listaReportes">
+                <p class="texto-secundario">
+                    Introduce un código para consultar un reporte.
+                </p>
+            </div>
+        </section>
+
+        <p class="nota">
+            En esta versión de demostración, los reportes solo pueden
+            consultarse desde el navegador donde fueron registrados.
+        </p>
+    </main>
+
+    <footer class="pie">
+        <p><strong>EcoAlerta</strong> — Seguimiento de incidencias.</p>
+    </footer>
+</body>
+</html>

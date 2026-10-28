@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoAlerta: plataforma de comunicación ambiental para la comunidad y la empresa minera.">
+    <title>Inicio | EcoAlerta</title>
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        /* Ajuste automático para alinear el texto a la izquierda y la imagen a la derecha */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.5rem;
+        }
+        .hero-contenido {
+            flex: 1;
+        }
+        .hero-imagen {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero-imagen img {
+            width: 100%;
+            max-width: 460px;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="cabecera">
+        <a class="marca" href="index.html">
+            <img src="img/favicon.svg" alt="Logotipo EcoAlerta">
+            <span>
+                <strong>EcoAlerta</strong>
+                <small>Comunidad y cuidado ambiental</small>
+            </span>
+        </a>
+
+        <button class="menu-boton" type="button"
+                aria-expanded="false" aria-controls="navegacion">
+            ☰ Menú
+        </button>
+
+        <button class="tema-boton" id="tema-boton" type="button"
+                aria-label="Activar modo oscuro" aria-pressed="false">
+            🌙 Modo oscuro
+        </button>
+
+        <nav id="navegacion" class="navegacion"
+             aria-label="Navegación principal">
+            <a href="index.html" aria-current="page">Inicio</a>
+            <a href="datos.html">Datos ambientales</a>
+            <a href="reportar.html">Reportar incidencia</a>
+            <a href="seguimiento.html">Seguimiento</a>
+            <a href="compromisos.html">Compromisos</a>
+            <a class="enlace-interno" href="acceso.html">Acceso de personal</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-contenido">
+                <p class="etiqueta">INFORMACIÓN · PARTICIPACIÓN · CUIDADO</p>
+                <h1>Una comunidad informada, un entorno mejor cuidado.</h1>
+                <p>
+                    Un espacio de comunicación entre los pobladores,
+                    la empresa minera y los especialistas ambientales.
+                </p>
+
+                <div class="acciones">
+                    <a class="boton boton-claro" href="reportar.html">
+                        Reportar una incidencia
+                    </a>
+                    <a class="boton boton-borde" href="seguimiento.html">
+                        Consultar mi reporte
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-imagen">
+                <img src="img/Gemini_Generated_Image_fia0k1fia0k1fia0.png" 
+                     alt="Monitoreo y cuidado ambiental en la comunidad"
+                     onerror="if (!this.dataset.intento) { this.dataset.intento = '1'; this.src = 'img/Gemini_Generated_Image_fia0k1fia0k1fia0.jpg'; } else if (this.dataset.intento === '1') { this.dataset.intento = '2'; this.src = 'img/Gemini_Generated_Image_fia0k1fia0k1fia0.jpeg'; }">
+            </div>
+        </section>
+
+        <section class="seccion">
+            <div class="encabezado-seccion">
+                <p class="etiqueta">¿CÓMO PARTICIPAR?</p>
+                <h2>EcoAlerta es para todos</h2>
+                <p>Selecciona el área que necesitas.</p>
+            </div>
+
+            <div class="tarjetas tres">
+                <article class="tarjeta">
+                    <span class="icono">🌱</span>
+                    <h3>Comunidad</h3>
+                    <p>
+                        Informa sobre posibles problemas ambientales,
+                        agrega una ubicación y consulta tu reporte.
+                    </p>
+                    <a href="reportar.html">Registrar una incidencia →</a>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="icono">🏢</span>
+                    <h3>Gerencia minera</h3>
+                    <p>
+                        Consulta las funciones de gestión, revisión
+                        de incidencias e informes.
+                    </p>
+                    <a href="acceso.html">Acceso de gerencia →</a>
+                </article>
+
+                <article class="tarjeta">
+                    <span class="icono">🦺</span>
+                    <h3>Ingenieros y especialistas</h3>
+                    <p>
+                        Revisa las funciones de evaluación técnica,
+                        inspecciones y seguimiento ambiental.
+                    </p>
+                    <a href="acceso.html">Acceso de especialistas →</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="franja">
+            <div>
+                <p class="etiqueta">TRANSPARENCIA Y COLABORACIÓN</p>
+                <h2>Tu voz es importante.</h2>
+                <p>
+                    La comunicación responsable ayuda a identificar
+                    problemas y coordinar posibles soluciones.
+                </p>
+            </div>
+            <a class="boton boton-verde" href="datos.html">
+                Consultar información ambiental
+            </a>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p><strong>EcoAlerta</strong> — Juntos por un entorno más seguro.
+        Derechos reservados-Geosistemas 2026</p>
+        <p>Plataforma de información y participación ambiental.</p>
+    </footer>
+</body>
+</html>

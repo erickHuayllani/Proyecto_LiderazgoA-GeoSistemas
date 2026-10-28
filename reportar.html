@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportar incidencia | EcoAlerta</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="cabecera">
+        <a class="marca" href="index.html">
+            <img src="img/favicon.svg" alt="Logotipo EcoAlerta">
+            <span><strong>EcoAlerta</strong><small>Comunidad y cuidado ambiental</small></span>
+        </a>
+        <button class="menu-boton" type="button"
+                aria-expanded="false" aria-controls="navegacion">☰ Menú</button>
+        <nav id="navegacion" class="navegacion" aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="datos.html">Datos ambientales</a>
+            <a href="reportar.html" aria-current="page">Reportar incidencia</a>
+            <a href="seguimiento.html">Seguimiento</a>
+            <a href="compromisos.html">Compromisos</a>
+            <a class="enlace-interno" href="acceso.html">Acceso de personal</a>
+        </nav>
+    </header>
+    
+    <main class="pagina">
+        <p class="etiqueta">PARTICIPACIÓN COMUNITARIA</p>
+        <h1>Reportar una incidencia</h1>
+        <p class="intro">
+            Cuéntanos qué ocurrió y dónde lo observaste.
+            Los campos marcados con * son obligatorios.
+        </p>
+
+        <div class="aviso">
+            <strong>Seguridad:</strong> no te acerques a zonas peligrosas
+            para tomar fotografías. Si existe un peligro inmediato,
+            contacta con los servicios de emergencia o las autoridades.
+        </div>
+
+        <form id="formReporte" class="formulario panel">
+            <div class="campo">
+                <label for="tipo">Tipo de incidencia *</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">Selecciona una opción</option>
+                    <option>Agua</option>
+                    <option>Polvo o calidad del aire</option>
+                    <option>Ruido</option>
+                    <option>Residuos</option>
+                    <option>Suelo</option>
+                    <option>Flora o fauna</option>
+                    <option>Otro</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="ubicacion">Ubicación *</label>
+                <input id="ubicacion" name="ubicacion" required
+                       maxlength="160"
+                       placeholder="Ej. Comunidad, sector o referencia">
+            </div>
+
+            <div class="campo">
+                <label for="descripcion">Descripción de lo ocurrido *</label>
+                <textarea id="descripcion" name="descripcion"
+                          rows="5" maxlength="1200" required
+                          placeholder="Explica qué observaste y cuándo ocurrió."></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="foto">Fotografía 📸</label>
+                <input id="foto" name="foto" type="file" accept="image/*">
+                <small>La imagen se utiliza solo para la vista previa de esta demostración.</small>
+                <img id="vistaFoto" class="vista-foto"
+                     alt="Vista previa de la fotografía" hidden>
+            </div>
+
+            <div class="campo">
+                <label for="contacto">Contacto 📱 </label>
+                <input id="contacto" name="contacto" maxlength="120"
+                       placeholder="Tu teléfono o correo si deseas una respuesta">
+                <small>Comparte únicamente tus propios datos si deseas que te contacten.</small>
+            </div>
+
+            <button class="boton boton-verde" type="submit">
+                Enviar reporte
+            </button>
+
+            <p id="mensajeFormulario" class="mensaje"
+               role="status" aria-live="polite"></p>
+        </form>
+    </main>
+
+    <footer class="pie">
+        <p><strong>EcoAlerta</strong> — Tu participación importa.</p>
+    </footer>
+</body>
+</html>
